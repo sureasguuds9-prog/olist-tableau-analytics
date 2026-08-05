@@ -1,0 +1,13 @@
+.DS_Store
+*.twbr
+*.log
+
+# Raw data stays local; the portable TWBX contains the required extract/files.
+data/*.csv
+data/*.zip
+
+# Local working copy; the canonical source is committed without the suffix.
+tableau/*_clean.twb
+
+# Editor screenshots are not portfolio assets.
+images/tableau_editor_full.png
