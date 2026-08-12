@@ -21,9 +21,49 @@ BI-реализациями. Три Tableau-дашборда демонстри�
 **[Открыть DataLens Executive Overview](https://datalens.ru/uoxcr8t1e4gid-01-olist-executive-overview)** ·
 **[Описание DataLens-реализации](datalens/README.md)**
 
-![Yandex DataLens Executive Overview](images/datalens_executive_overview.png)
+## Галерея дашбордов
+
+### Tableau - Executive Overview
+
+Продажи, заказы, клиенты, товарные категории, география и качество исполнения.
 
 ![Olist E-commerce Overview](images/olist_dashboard.png)
+
+### Tableau - Customer & Retention
+
+Повторные покупки, когортное удержание, частотность и RFM-сегменты.
+
+![Customer & Retention Dashboard](images/olist_customer_retention_dashboard.png)
+
+### Tableau - Delivery & Service Quality
+
+Late Rate, сроки доставки, штаты риска и влияние задержек на отзывы.
+
+![Delivery & Service Quality Dashboard](images/olist_delivery_service_dashboard.png)
+
+### Yandex DataLens - Executive Overview
+
+Семь ключевых KPI по доставленным заказам за весь доступный период.
+
+![Yandex DataLens Executive Overview](images/datalens_executive_overview.png)
+
+### Yandex DataLens - Продажи и категории
+
+Динамика GMV, заказов и среднего чека, категории и селекторы анализа.
+
+![Yandex DataLens Продажи и категории](images/datalens_sales_categories.png)
+
+### Yandex DataLens - Доставка и отзывы
+
+Сравнение своевременной и поздней доставки, сроков и плохих отзывов.
+
+![Yandex DataLens Доставка и отзывы](images/datalens_delivery_reviews.png)
+
+### Yandex DataLens - Клиенты и retention
+
+Когортная динамика, размер когорт, выручка и поведение RFM-сегментов.
+
+![Yandex DataLens Клиенты и retention](images/datalens_clients_retention.png)
 
 ## Зачем нужен дашборд
 
@@ -60,8 +100,6 @@ BI-реализациями. Три Tableau-дашборда демонстри�
 
 ## Часть 2 — Customer & Retention
 
-![Customer & Retention Dashboard](images/olist_customer_retention_dashboard.png)
-
 Вторая часть отвечает на вопрос: **возвращаются ли клиенты после первой покупки и в каких сегментах есть потенциал для удержания?**
 
 Дашборд объединяет три KPI и пять аналитических представлений:
@@ -79,8 +117,6 @@ BI-реализациями. Три Tableau-дашборда демонстри�
 Подробное описание бизнес-логики, формул, RFM-сегментов и QA: [`docs/dashboard_v2.md`](docs/dashboard_v2.md).
 
 ## Часть 3 — Delivery & Service Quality
-
-![Delivery & Service Quality Dashboard](images/olist_delivery_service_dashboard.png)
 
 Третья часть отвечает на вопрос: **где нарушаются обещанные сроки доставки и как это связано с клиентским опытом?**
 
