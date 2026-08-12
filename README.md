@@ -1,10 +1,27 @@
-# Olist E-commerce Analytics — Tableau
+# Olist E-commerce Analytics - Tableau и Yandex DataLens
 
 ![Tableau](https://img.shields.io/badge/Tableau-2026.2-E97627?logo=tableau&logoColor=white)
-![Статус](https://img.shields.io/badge/статус-3%20дашборда%20готовы-2E8B57)
+![DataLens](https://img.shields.io/badge/Yandex-DataLens-FC3F1D)
+![Статус](https://img.shields.io/badge/статус-7%20BI--страниц%20готовы-2E8B57)
 ![Язык](https://img.shields.io/badge/интерфейс-русский-4C78A8)
 
-Pet-проект по аналитике бразильского маркетплейса Olist. Три Tableau-дашборда объединяют Executive Overview, анализ клиентов и удержания, а также контроль доставки и качества сервиса.
+Pet-проект по аналитике бразильского маркетплейса Olist с двумя независимыми
+BI-реализациями. Три Tableau-дашборда демонстрируют работу с исходной моделью
+данных, relationships и dashboard actions. Четыре страницы Yandex DataLens
+показывают альтернативный подход на компактных аналитических витринах.
+
+## Две BI-реализации
+
+| Инструмент | Что демонстрирует | Результат |
+|---|---|---|
+| Tableau | модель исходных таблиц, calculated fields, relationships, dashboard actions | 3 дашборда и переносимый workbook `.twbx` |
+| Yandex DataLens | аналитические витрины, управленческая структура страниц, безопасные селекторы | 4 живых дашборда и 6 CSV-витрин |
+
+**[Открыть Tableau workbook](tableau/olist_ecommerce_dashboard.twbx)** ·
+**[Открыть DataLens Executive Overview](https://datalens.ru/uoxcr8t1e4gid-01-olist-executive-overview)** ·
+**[Описание DataLens-реализации](datalens/README.md)**
+
+![Yandex DataLens Executive Overview](images/datalens_executive_overview.png)
 
 ![Olist E-commerce Overview](images/olist_dashboard.png)
 
@@ -159,11 +176,26 @@ DATEDIFF('day', [order_estimated_delivery_date], [order_delivered_customer_date]
 
 ## Как открыть проект
 
+### Tableau
+
 1. Скачайте [`tableau/olist_ecommerce_dashboard.twbx`](tableau/olist_ecommerce_dashboard.twbx).
 2. Откройте файл в Tableau Desktop или Tableau Public.
 3. Используйте фильтры справа для анализа периода, штата, категории и статуса.
 
-CSV не хранятся отдельно в GitHub. Переносимая версия `.twbx` содержит необходимые данные. Исходный датасет: [Brazilian E-Commerce Public Dataset by Olist](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce).
+Исходные CSV для Tableau не хранятся отдельно в GitHub. Переносимая версия
+`.twbx` содержит необходимые данные. Агрегированные CSV-витрины DataLens
+находятся в `datalens/data/`. Исходный датасет:
+[Brazilian E-Commerce Public Dataset by Olist](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce).
+
+### Yandex DataLens
+
+1. Откройте [Executive Overview](https://datalens.ru/uoxcr8t1e4gid-01-olist-executive-overview).
+2. Перейдите к тематическим страницам через ссылки в [`datalens/README.md`](datalens/README.md).
+3. Для воспроизведения загрузите шесть файлов из `datalens/data/` и следуйте
+   [`пошаговой инструкции`](datalens/DATALENS_STEP_BY_STEP.md).
+
+DataLens-версия не заменяет Tableau workbook: это отдельный вариант
+визуализации тех же бизнес-направлений с другой архитектурой данных.
 
 ## Ограничения
 
@@ -178,6 +210,13 @@ CSV не хранятся отдельно в GitHub. Переносимая в�
 ```text
 olist-tableau-analytics/
 ├── README.md
+├── datalens/
+│   ├── README.md
+│   ├── DATALENS_STEP_BY_STEP.md
+│   ├── prepare_datalens_data.py
+│   ├── requirements.txt
+│   └── data/
+│       └── 6 аналитических CSV-витрин
 ├── data/
 │   └── README.md
 ├── docs/
@@ -199,9 +238,12 @@ olist-tableau-analytics/
 - **Часть 1 — Executive Overview:** готова.
 - **Часть 2 — Customer & Retention:** готова — когорты, повторные покупки и RFM.
 - **Часть 3 — Delivery & Service Quality:** готова — SLA, задержки, регионы риска и отзывы.
+- **Альтернативная BI-реализация в DataLens:** готова — 4 страницы, 6 витрин и тематические селекторы.
 
 ## Стек и личный вклад
 
-`Tableau Desktop` · `Relationships` · `Calculated Fields` · `Dashboard Actions` · `Git/GitHub`
+`Tableau Desktop` · `Yandex DataLens` · `Relationships` · `Calculated Fields` · `Dashboard Actions` · `Python` · `CSV marts` · `Git/GitHub`
 
-В рамках проекта самостоятельно собраны модель данных, расчётные поля, KPI, визуализации, глобальные фильтры, QA-проверки и документация репозитория.
+В рамках проекта самостоятельно собраны модель данных, аналитические витрины,
+расчётные поля, KPI, визуализации, селекторы, QA-проверки и документация двух
+BI-реализаций.
